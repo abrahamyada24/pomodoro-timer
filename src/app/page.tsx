@@ -316,7 +316,7 @@ export default function PomodoroApp(): JSX.Element {
       {/* Footer */}
       <footer className="w-full max-w-md text-center py-4 border-t border-gray-200 bg-white/50 backdrop-blur-sm rounded-t-2xl">
         <div className="flex items-center justify-center space-x-3">
-          <span className="text-sm text-gray-600">Made with ❤️ by</span>
+          <span className="text-sm text-gray-600"></span>
           <span className="text-sm font-semibold text-gray-800">Abraham Yada</span>
           <a
             href="https://www.instagram.com/abrahamyada?igsh=MXZ6dnBlMGp5Mzkzcw=="
@@ -325,7 +325,7 @@ export default function PomodoroApp(): JSX.Element {
             className="flex items-center space-x-1 text-pink-600 hover:text-pink-700 transition-colors"
           >
             <Instagram size={16} />
-            <span className="text-sm">@[abrahamyada]</span>
+            <span className="text-sm">@abrahamyada</span>
           </a>
         </div>
       </footer>
