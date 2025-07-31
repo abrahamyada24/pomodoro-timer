@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { Play, Pause, RotateCcw, Settings, Volume2 } from 'lucide-react'
+import { Play, Pause, RotateCcw, Settings, Volume2, Instagram } from 'lucide-react'
 
 export default function PomodoroApp(): JSX.Element {
   const [timeLeft, setTimeLeft] = useState(25 * 60) // 25 minutes in seconds
@@ -137,8 +137,8 @@ export default function PomodoroApp(): JSX.Element {
   const progress = ((totalDuration - timeLeft) / totalDuration) * 100
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex flex-col items-center justify-center p-4">
+      <div className="w-full max-w-md flex-grow flex flex-col justify-center">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800 mb-2">🍅 Pomodoro Timer</h1>
@@ -307,11 +307,28 @@ export default function PomodoroApp(): JSX.Element {
         )}
 
         {/* Instructions */}
-        <div className="text-center text-sm text-gray-500">
+        <div className="text-center text-sm text-gray-500 mb-6">
           <p>🍅 Work for {workDuration} minutes, then take a {shortBreakDuration}-minute break</p>
           <p>After 4 pomodoros, enjoy a {longBreakDuration}-minute long break!</p>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="w-full max-w-md text-center py-4 border-t border-gray-200 bg-white/50 backdrop-blur-sm rounded-t-2xl">
+        <div className="flex items-center justify-center space-x-3">
+          <span className="text-sm text-gray-600">Made with ❤️ by</span>
+          <span className="text-sm font-semibold text-gray-800">Abraham Yada</span>
+          <a
+            href="https://www.instagram.com/abrahamyada?igsh=MXZ6dnBlMGp5Mzkzcw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-1 text-pink-600 hover:text-pink-700 transition-colors"
+          >
+            <Instagram size={16} />
+            <span className="text-sm">@[abrahamyada]</span>
+          </a>
+        </div>
+      </footer>
     </div>
   )
 }
